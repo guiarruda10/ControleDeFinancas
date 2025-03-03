@@ -1,54 +1,64 @@
-# React + TypeScript + Vite
+# Controle de Finanças Pessoais
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de controle de finanças pessoais desenvolvido em React com TypeScript. Ele permite que os usuários verifiquem suas receitas, visualizem o balanço de todos os meses e adicionem gastos de forma fácil e intuitiva.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Verificação de Receita**: Visualize a receita total para o mês atual.
+- **Balanço Mensal**: Acompanhe o balanço de todos os meses, incluindo receitas e despesas.
+- **Adição de Gastos**: Adicione novos gastos com descrição, valor e categoria.
+- **Categorias Personalizadas**: Organize seus gastos em categorias personalizadas.
+- **Filtragem por Data**: Filtre os gastos por mês para uma visão mais detalhada.
 
-## Expanding the ESLint configuration
+## Estrutura do Projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+O projeto está organizado da seguinte forma:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **src/components**: Contém os componentes reutilizáveis da aplicação, como áreas de informação, entrada de dados, resumos e tabelas.
+- **src/data**: Contém os dados iniciais, como categorias e itens.
+- **src/helpers**: Funções auxiliares, como filtragem por data.
+- **src/types**: Definições de tipos TypeScript.
+- **src/App.tsx**: Componente principal da aplicação.
+- **src/main.tsx**: Ponto de entrada da aplicação.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Como Executar o Projeto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/guiarruda10/ControleDeFinancas.git
+   cd ControleDeFinancas
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. **Instale as dependências**:
+   ```bash
+   npm install
+   ```
+
+3. **Execute o projeto**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Acesse a aplicação**:
+   Abra o navegador e acesse `http://localhost:5173`.
+   
+
+## Tecnologias Utilizadas
+
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **Vite**: Ferramenta de build rápida para projetos modernos.
+- **TypeScript**: Adiciona tipagem estática ao JavaScript.
+- **Styled Components**: Para estilização modularizada dos componentes.
+
+## Contribuição
+
+Contribuições são bem-vindas! Se você quiser contribuir, siga os passos abaixo:
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+**Desenvolvido por [Guilherme Magalhães]**
 ```
